@@ -824,13 +824,11 @@ class cRegistry {
     }
 
     /**
-    * Returns the actual encoding (standard: utf-8)
-    *
-    * @return string|bool
-    *         name of encoding or false if no language found
-     * @throws cDbException
-     * @throws cException
-    */
+     * Returns the actual encoding (standard: utf-8)
+     *
+     * @return string|bool
+     *         name of encoding or false if no language found
+     */
     public static function getEncoding() {
 
         $apiLanguage = new cApiLanguage(self::getLanguageId());
