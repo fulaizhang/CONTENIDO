@@ -36,7 +36,6 @@
 ./classes/class.purge.php
 ./classes/class.registry.php
 ./classes/class.requestvalidator.php
-./classes/class.search.php
 ./classes/class.security.php
 ./classes/class.session.php
 ./classes/class.string.multi.byte.wrapper.php
@@ -494,10 +493,8 @@
 ./includes/chains/include.chain.template.parsetemplate.php
 ./includes/frontend/include.front_content.php
 ./includes/frontend/include.front_crcloginform.inc.php
-./includes/functions.api.category.php
 ./includes/functions.api.images.php
 ./includes/functions.api.php
-./includes/functions.api.string.php
 ./includes/functions.con.php
 ./includes/functions.con2.php
 ./includes/functions.database.php

@@ -81,31 +81,11 @@ abstract class cItemBaseAbstract extends cGenericDb {
     protected $table;
 
     /**
-     * Setting of primaryKey name (deprecated)
-     *
-     * @deprecated [2015-05-04]
-     *         Class variable primaryKey is deprecated, use getPrimaryKeyName() instead
-     * @var string
-     */
-    private $primaryKey;
-
-    /**
      * Storage of the primary key name
      *
      * @var string
      */
     protected $_primaryKeyName;
-
-    /**
-     * Checks for the virginity of created objects.
-     * If true, the object
-     * is virgin and no operations on it except load-functions are allowed.
-     *
-     * @deprecated [2015-05-05]
-     *         Class variable virgin is deprecated, use negated result of isLoaded() instead
-     * @var bool
-     */
-    private $virgin = true;
 
     /**
      * Checks if an object is loaded
@@ -209,40 +189,6 @@ abstract class cItemBaseAbstract extends cGenericDb {
      */
     protected function _setLoaded($value) {
         $this->_loaded = (bool) $value;
-    }
-
-    /**
-     * Magic getter function for deprecated variables primaryKey and virgin
-     * This function will be removed when the variables are no longer supported
-     *
-     * @param string $name
-     *         Name of the variable that should be accessed
-     * @return mixed
-     */
-    public function __get($name) {
-        if ('primaryKey' === $name) {
-            return static::getPrimaryKeyName();
-        }
-        if ('virgin' === $name) {
-            return !static::isLoaded();
-        }
-    }
-
-    /**
-     * Magic setter function for deprecated variables primaryKey and virgin
-     * This function will be removed when the variables are no longer supported
-     *
-     * @param string $name
-     *         Name of the variable that should be accessed
-     * @param mixed $value
-     *         Value that should be assigned to variable
-     */
-    public function __set($name, $value) {
-        if ('primaryKey' === $name) {
-            static::_setPrimaryKeyName($value);
-        } else if ('virgin' === $name) {
-            static::_setLoaded(!(bool) $value);
-        }
     }
 
     /**

@@ -242,33 +242,6 @@ class cApiClient extends Item {
     }
 
     /**
-     * Static accessor to the singleton instance.
-     *
-     * @deprecated [2015-05-21]
-     *         This method is no longer supported (no replacement)
-     * @todo There is no need since caching is available at GenericDB level
-     * @param int $client [optional]
-     * @return cApiClient
-     *         Reference to the singleton instance.
-     */
-    public static function getInstance($client = false) {
-        static $currentInstance = array();
-
-        cDeprecated('This method is deprecated and is not needed any longer');
-
-        if (!$client) {
-            // Use global $client
-            $client = cRegistry::getClientId();
-        }
-
-        if (!isset($currentInstance[$client])) {
-            $currentInstance[$client] = new cApiClient($client);
-        }
-
-        return $currentInstance[$client];
-    }
-
-    /**
      * Load dataset by primary key
      *
      * @param int $idKey

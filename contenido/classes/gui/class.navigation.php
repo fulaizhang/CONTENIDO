@@ -14,7 +14,6 @@
 
 defined('CON_FRAMEWORK') || die('Illegal call: Missing framework initialization - request aborted.');
 
-cInclude('includes', 'functions.api.string.php');
 cInclude('includes', 'functions.api.images.php');
 
 /**

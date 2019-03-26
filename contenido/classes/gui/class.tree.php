@@ -49,38 +49,6 @@ class cGuiTree extends cTree {
     const TREEVIEW_GRIDLINE_NONE = 'none';
 
     /**
-     *
-     * @var string
-     * @deprecated [2015-05-21]
-     *    This constant is no longer supported (no replacement)
-     */
-    const TREEVIEW_BACKGROUND_NONE = 'none';
-
-    /**
-     *
-     * @var string
-     * @deprecated [2015-05-21]
-     *         This constant is no longer supported (no replacement)
-     */
-    const TREEVIEW_BACKGROUND_SHADED = 'shaded';
-
-    /**
-     *
-     * @var string
-     * @deprecated [2015-05-21]
-     *         This constant is no longer supported (no replacement)
-     */
-    const TREEVIEW_MOUSEOVER_NONE = 'none';
-
-    /**
-     *
-     * @var string
-     * @deprecated [2015-05-21]
-     *         This constant is no longer supported (no replacement)
-     */
-    const TREEVIEW_MOUSEOVER_MARK = 'mark';
-
-    /**
      * @var cApiUser
      */
     protected $_user;
@@ -164,39 +132,6 @@ class cGuiTree extends cTree {
      */
     public function setGridlineMode($mode) {
         $this->_gridlineMode = $mode;
-    }
-
-    /**
-     *
-     * @param unknown_type $mode
-     * @deprecated [2015-05-21]
-     *         This method is no longer supported (no replacement)
-     */
-    public function setBackgroundMode($mode) {
-        cDeprecated('This method is deprecated and is not needed any longer');
-        $this->_backgroundMode = $mode;
-    }
-
-    /**
-     *
-     * @param unknown_type $mode
-     * @deprecated [2015-05-21]
-     *         This method is no longer supported (no replacement)
-     */
-    public function setMouseoverMode($mode) {
-        cDeprecated('This method is deprecated and is not needed any longer');
-        $this->_mouseoverMode = $mode;
-    }
-
-    /**
-     *
-     * @param unknown_type $colors
-     * @deprecated [2015-05-21]
-     *         This method is no longer supported (no replacement)
-     */
-    public function setBackgroundColors($colors) {
-        cDeprecated('This method is deprecated and is not needed any longer');
-        $this->_backgroundColors = $colors;
     }
 
     /**

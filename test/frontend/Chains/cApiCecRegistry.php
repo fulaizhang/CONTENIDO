@@ -45,8 +45,6 @@ class chain_cApiCecRegistryClassStatic_Test
     }
 }
 
-
-
 /**
  * Class to test cApiCecRegistry.
  * @package          Testing
@@ -54,24 +52,13 @@ class chain_cApiCecRegistryClassStatic_Test
  */
 class cApiCecRegistryTest extends PHPUnit_Framework_TestCase
 {
-
-    /**
-     * Test
-     * - cApiCecRegistry->registerChain()
-     * - cApiCecRegistry->isChainRegistered()
-     * - cApiCecRegistry->unregisterChain()
-	 *
-	 * @deprecated 2014-08-07 - This method is deprecated and is not needed any longer
-     */
-    public function testChains() {
-        cDeprecated('This method is deprecated and is not needed any longer');
-    }
-
     /**
      * Test
      * - cApiCecRegistry->addChainFunction()
      * - cApiCecRegistry->chainFunctionExists()
      * - cApiCecRegistry->removeChainFunction()
+     *
+     * @throws cInvalidArgumentException
      */
     public function testChainFunctions()
     {
@@ -109,5 +96,4 @@ class cApiCecRegistryTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(false, $exists);
 
     }
-
 }

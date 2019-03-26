@@ -106,7 +106,7 @@ class ItemTest extends PHPUnit_Framework_TestCase {
         $this->assertSame($exp, $act);
 
         // test name of primary key
-        $act = PHPUnit_Framework_Assert::readAttribute($this->_dummyItem, 'primaryKey');
+        $act = PHPUnit_Framework_Assert::readAttribute($this->_dummyItem, '_primaryKeyName');
         $exp = 'primaryKey';
         $this->assertSame($exp, $act);
     }

@@ -997,19 +997,6 @@ function conDeleteart($idart) {
 }
 
 /**
- * Extract a number from a string
- *
- * @deprecated [2015-05-21]
- *         use cString::extractNumber() instead
- * @param string $string
- *         String var by reference
- * @return string
- */
-function extractNumber(&$string) {
-    return cString::extractNumber($string);
-}
-
-/**
  * Change the template of a category
  *
  * @param int $idcat

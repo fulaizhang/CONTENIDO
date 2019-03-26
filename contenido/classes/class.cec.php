@@ -76,72 +76,6 @@ class cApiCecRegistry {
     }
 
     /**
-     * Registers a chain (adds the chain to the internal chain holder)
-     * NOTE: The number of parameter is not restricted.
-     * You can pass
-     * as much parameter as you want.
-     *
-     * @deprecated [2014-08-07]
-     *         This method is deprecated and is not needed any longer
-     * @param string $sChainName
-     */
-    public function registerChain($sChainName) {
-        cDeprecated('This method is deprecated and is not needed any longer');
-    }
-
-    /**
-     * Unregisters a chain
-     *
-     * @deprecated [2014-08-07]
-     *         This method is deprecated and is not needed any longer
-     * @param string $sChainName
-     */
-    public function unregisterChain($sChainName) {
-        cDeprecated('This method is deprecated and is not needed any longer');
-    }
-
-    /**
-     * Checks if a chain is registered or not.
-     *
-     * @deprecated [2014-08-07]
-     *         This method is deprecated and is not needed any longer
-     * @param string $sChainName
-     * @return bool
-     */
-    public function isChainRegistered($sChainName) {
-        cDeprecated('This method is deprecated and is not needed any longer');
-        return true;
-    }
-
-    /**
-     * Returns list of registered chain names
-     *
-     * @deprecated [2014-08-07]
-     *         This method is deprecated and is not needed any longer
-     * @return array
-     */
-    public function getRegisteredChainNames() {
-        cDeprecated('This method is deprecated and is not needed any longer');
-        return array();
-    }
-
-    /**
-     * Adds the chain to the internal chain holder
-     *
-     * @deprecated [2014-08-07]
-     *         This method is deprecated and is not needed any longer
-     * @param string $sChainName
-     *         Chain name
-     * @param array $aParameters [optional]
-     *         Chain parameter
-     * @return NULL
-     */
-    protected function _addChain($sChainName, array $aParameters = array()) {
-        cDeprecated('This method is deprecated and is not needed any longer');
-        return NULL;
-    }
-
-    /**
      * Adds a chain function which is to invoke.
      *
      * @param string $sChainName
@@ -396,29 +330,6 @@ class cApiCecChainItem {
      */
     public function getFunctionName() {
         return $this->_sFunctionName;
-    }
-
-    /**
-     * Sets the callback parameters
-     *
-     * @deprecated [2014-08-07]
-     *         This method is deprecated and is not needed any longer
-     * @param array $aParameters
-     */
-    public function setParameters(array $aParameters) {
-        cDeprecated('This method is deprecated and is not needed any longer');
-    }
-
-    /**
-     * Returns the function name
-     *
-     * @deprecated [2014-08-07]
-     *         This method is deprecated and is not needed any longer
-     * @return array
-     */
-    public function getParameters() {
-        cDeprecated('This method is deprecated and is not needed any longer');
-        return array();
     }
 
     /**

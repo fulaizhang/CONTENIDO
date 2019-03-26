@@ -204,7 +204,7 @@ class cLog {
      *
      * @param string $shortcut
      *         Shortcut name
-     * @param string $handler
+     * @param callable $handler
      *         Name of the function to call
      * @throws cInvalidArgumentException
      *         if the given shortcut is empty or already in use or if the
@@ -269,8 +269,10 @@ class cLog {
      * parameter is not false.
      *
      * @param bool $revoke [optional]
-     *         Flag, whether the buffer is cleared or not (optional, default: true)
-     * @return bool|void
+     *                     Flag, whether the buffer is cleared or not (optional, default: true)
+     *
+     * @return bool
+     * @throws cInvalidArgumentException
      */
     public function commit($revoke = true) {
         if (count($this->_buffer) == 0) {
@@ -285,6 +287,7 @@ class cLog {
         if ($revoke == true) {
             $this->revoke();
         }
+        return true;
     }
 
     /**

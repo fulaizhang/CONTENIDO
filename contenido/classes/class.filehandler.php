@@ -491,7 +491,7 @@ class cFileHandler {
     /**
      * Sets the default permissions for the given file.
      *
-     * @deprecated use setDefaultPermissions() instead
+     * @deprecated [2018-12-11] use setDefaultPermissions() instead
      * @param string $filename
      *         the name of the file
      *

@@ -97,7 +97,7 @@ class cDirHandler {
         $success = rename($dirname, $destination);
 
         if ($success) {
-            self::setDefaultDirPerms($destination);
+            self::setDefaultPermissions($destination);
         }
 
         return $success;
@@ -173,7 +173,7 @@ class cDirHandler {
     /**
      * Sets the default permissions for the given directory.
      *
-     * @deprecated use setDefaultPermissions() instead
+     * @deprecated [2018-12-11] use setDefaultPermissions() instead
      * @param string $dirname
      *         the name of the directory
      *

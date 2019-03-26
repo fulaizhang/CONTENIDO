@@ -173,16 +173,13 @@ class cApiPropertyCollection extends ItemCollection {
      *                           Entry name
      * @param mixed $value
      *                           Value
-     * @param bool  $bDontEscape [optional; default false]
-     *                           on internal call do not escape parameters again
-     *                           NOTE: This parameter is deprecated since 2013-11-26
      *
      * @return cApiProperty
      * @throws cDbException
      * @throws cException
      * @throws cInvalidArgumentException
      */
-    public function create($itemtype, $itemid, $type, $name, $value, $bDontEscape = false) {
+    public function create($itemtype, $itemid, $type, $name, $value) {
         global $auth;
 
         $item = $this->createNewItem();
@@ -373,7 +370,7 @@ class cApiPropertyCollection extends ItemCollection {
                 $this->_addToCache($item);
             }
         } else {
-            $this->create($itemtype, $itemid, $type, $name, $value, true);
+            $this->create($itemtype, $itemid, $type, $name, $value);
         }
     }
 

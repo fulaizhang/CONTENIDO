@@ -66,7 +66,6 @@ contenido/classes/class.permission.php -text
 contenido/classes/class.purge.php -text
 contenido/classes/class.registry.php -text
 contenido/classes/class.requestvalidator.php -text
-contenido/classes/class.search.php -text
 contenido/classes/class.security.php -text
 contenido/classes/class.session.php -text
 contenido/classes/class.systemtest.php -text
@@ -1147,10 +1146,8 @@ contenido/includes/chains/include.chain.frontend.cat_access.php -text
 contenido/includes/chains/include.chain.frontend.cat_backendaccess.php -text
 contenido/includes/chains/include.chain.frontend.createbasehref.php -text
 contenido/includes/chains/include.chain.template.parsetemplate.php -text
-contenido/includes/functions.api.category.php -text
 contenido/includes/functions.api.images.php -text
 contenido/includes/functions.api.php -text
-contenido/includes/functions.api.string.php -text
 contenido/includes/functions.con.php -text
 contenido/includes/functions.con2.php -text
 contenido/includes/functions.database.php -text
