@@ -175,18 +175,25 @@ class cSecurity {
     /**
      * Escaped an query-string with addslashes.
      *
-     * @param string $sString
+     * @param string $string
      *         Input string
+     *
      * @return string
      *         Converted string
      */
-    public static function escapeString($sString)
+    public static function escapeString($string)
     {
-        $sString = (string)$sString;
-        $sString = stripslashes($sString);
-        $sString = addslashes($sString);
+        $string = (string)$string;
 
-        return $sString;
+        // This seems to be insane .. but wait!
+        // CONTENIDO always adds slashes to data in $_GET, $_POST or $_SERVER.
+        // Strings that should be escaped using this method may come from one of these super globals
+        // or a different datasource which has not been escaped yet.
+        // So stripping slashes first before adding them is the only way to consider both cases.
+        $string = stripslashes($string);
+        $string = addslashes($string);
+
+        return $string;
     }
 
     /**

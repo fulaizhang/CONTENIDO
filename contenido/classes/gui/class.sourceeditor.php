@@ -189,6 +189,9 @@ class cGuiSourceEditor extends cGuiPage {
             return;
         }
 
+        // if magic quotes are on, strip slashes from the array
+        $req = cString::stripSlashes($req);
+
         // determine the file type for the file information table
         $dbFileType = '';
         switch($req['area']) {
