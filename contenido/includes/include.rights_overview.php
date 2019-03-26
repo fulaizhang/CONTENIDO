@@ -25,11 +25,7 @@ if (!($perm->have_perm_area_action($area, $action) || $perm->have_perm_area_acti
 }
 
 // @TODO Find a general solution for this!
-if (defined('CON_STRIPSLASHES')) {
-    $request = cString::stripSlashes($_REQUEST);
-} else {
-    $request = $_REQUEST;
-}
+$request = cString::stripSlashes($_REQUEST);
 
 if (!isset($request['userid'])) {
     // no user id, get out here

@@ -492,44 +492,6 @@ msgstr ""
 msgid "PHP file upload is enabled"
 msgstr "PHP file_upload ist aktiviert"
 
-#: classes/class.systemtest.php:285
-msgid "PHP setting 'magic_quotes_runtime' is turned on"
-msgstr "PHP-Einstellung 'magic_quotes_runtime' ist aktiviert."
-
-#: classes/class.systemtest.php:285
-msgid ""
-"The PHP setting 'magic_quotes_runtime' is turned on. CONTENIDO has been "
-"developed to comply with magic_quotes_runtime=Off as this is the PHP default "
-"setting. You have to change this directive to make CONTENIDO work."
-msgstr ""
-"Die PHP-Einstellung 'magic_quotes_runtime' ist aktiviert. CONTENIDO wurde "
-"entwickelt mit der deaktivierten Einstellung 'magic_quotes_runtime', da dies "
-"die Standardeinstellung von PHP ist. Sie müssen diese Einstellung verändern, "
-"damit CONTENIDO funktioniert."
-
-#: classes/class.systemtest.php:285
-msgid "'magic_quotes_runtime' is turned off"
-msgstr "PHP-Einstellung 'magic_quotes_runtime' ist nicht aktiviert."
-
-#: classes/class.systemtest.php:286
-msgid "PHP Setting 'magic_quotes_sybase' is turned on"
-msgstr "PHP-Einstellung 'magic_quotes_sybase' eingeschalten"
-
-#: classes/class.systemtest.php:286
-msgid ""
-"The PHP Setting 'magic_quotes_sybase' is turned on. CONTENIDO has been "
-"developed to comply with magic_quotes_sybase=Off as this is the PHP default "
-"setting. You have to change this directive to make CONTENIDO work."
-msgstr ""
-"Die PHP-Einstellung 'magic_quotes_sybase' ist aktiviert. CONTENIDO wurde "
-"entwickelt mit der deaktivierten Einstellung 'magic_quotes_sybase', da dies "
-"die Standardeinstellung von PHP ist. Sie müssen diese Einstellung verändern, "
-"damit CONTENIDO funktioniert."
-
-#: classes/class.systemtest.php:286
-msgid "'magic_quotes_sybase' is turned off"
-msgstr "PHP-Einstellung 'magic_quotes_sybase' ist nicht aktiviert"
-
 #: classes/class.systemtest.php:287
 msgid "PHP maximum execution time is less than 30 seconds"
 msgstr "Die maximale Ausführungszeit von PHP liegt unter 30 Sekunden."

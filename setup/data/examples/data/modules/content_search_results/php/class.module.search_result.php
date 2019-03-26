@@ -127,10 +127,7 @@ class SearchResultModule {
         $this->_artSpecs = $sArtSpecs;
 
         // perform first preparation of searchterm
-        $searchTerm = $this->_searchTerm;
-        if (true === cRegistry::getConfigValue('simulate_magic_quotes')) {
-            $searchTerm = stripslashes($searchTerm);
-        }
+        $searchTerm = stripslashes($this->_searchTerm);
 
         // assume search term is always url encoded
         // default enctype for a form is application/x-www-form-urlencoded

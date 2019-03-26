@@ -44,12 +44,14 @@ class cSecurity {
      * @return string
      *         Filtered string
      */
-    public static function filter($sString, $oDb) {
+    public static function filter($sString, $oDb)
+    {
         $sString = self::toString($sString);
-        if (defined('CON_STRIPSLASHES')) {
-            $sString = stripslashes($sString);
-        }
-        return self::escapeDB(conHtmlSpecialChars($sString), $oDb, false);
+        $sString = stripslashes($sString);
+        $sString = conHtmlSpecialChars($sString);
+        $sString = self::escapeDB($sString, $oDb, false);
+
+        return $sString;
     }
 
     /**
@@ -163,7 +165,7 @@ class cSecurity {
         if (!is_object($oDB)) {
             return self::escapeString($sString);
         } else {
-            if (defined('CON_STRIPSLASHES') && $bUndoAddSlashes == true) {
+            if ($bUndoAddSlashes == true) {
                 $sString = stripslashes($sString);
             }
             return $oDB->escape($sString);
@@ -178,12 +180,13 @@ class cSecurity {
      * @return string
      *         Converted string
      */
-    public static function escapeString($sString) {
-        $sString = (string) $sString;
-        if (defined('CON_STRIPSLASHES')) {
-            $sString = stripslashes($sString);
-        }
-        return addslashes($sString);
+    public static function escapeString($sString)
+    {
+        $sString = (string)$sString;
+        $sString = stripslashes($sString);
+        $sString = addslashes($sString);
+
+        return $sString;
     }
 
     /**

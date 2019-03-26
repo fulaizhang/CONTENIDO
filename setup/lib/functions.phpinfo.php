@@ -68,19 +68,6 @@ function getPHPGPCOrder() {
     return getPHPIniSetting('gpc_order');
 }
 
-function getPHPMagicQuotesGPC() {
-    return getPHPIniSetting('magic_quotes_gpc');
-}
-
-function getPHPMagicQuotesRuntime() {
-    return getPHPIniSetting('magic_quotes_runtime');
-}
-
-// @todo Check if sybase still needed
-function getPHPMagicQuotesSybase() {
-    return getPHPIniSetting('magic_quotes_sybase');
-}
-
 function getPHPMaxExecutionTime() {
     return getPHPIniSetting('max_execution_time');
 }

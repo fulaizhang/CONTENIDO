@@ -458,9 +458,7 @@ class cTinymce4Configuration {
         }
 
         // custom tinymce 4 settings overwrite other fields
-        if (cRegistry::getConfigValue('simulate_magic_quotes') === true) {
-            $config[$key]['custom'] = stripslashes($config[$key]['custom']);
-        }
+        $config[$key]['custom'] = stripslashes($config[$key]['custom']);
 
         // unescape strings then build config
         $customConfig = (array) json_decode($config[$key]['custom'], true);

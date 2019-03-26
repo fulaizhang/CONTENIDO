@@ -25,11 +25,7 @@ if (cString::getStringLength($idclient) == 0) {
 }
 
 // @TODO Find a general solution for this!
-if (defined('CON_STRIPSLASHES')) {
-    $request = cString::stripSlashes($_REQUEST);
-} else {
-    $request = $_REQUEST;
-}
+$request = cString::stripSlashes($_REQUEST);
 
 $oFrmRange = new cGuiTableForm('range');
 $oFrmRange->setVar('area', $area);

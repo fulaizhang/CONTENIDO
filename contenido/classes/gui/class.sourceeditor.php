@@ -189,13 +189,6 @@ class cGuiSourceEditor extends cGuiPage {
             return;
         }
 
-        // if magic quotes are on, strip slashes from the array
-        if(ini_get('magic_quotes_gpc')) {
-            foreach($req as $key => $value) {
-                $req[$key] = stripslashes($value);
-            }
-        }
-
         // determine the file type for the file information table
         $dbFileType = '';
         switch($req['area']) {

@@ -25,10 +25,7 @@ if (getEffectiveSetting("search", "term_tracking", "on") != "on") {
 
 // the collection we'll be showing
 $termCollection = new cApiSearchTrackingCollection();
-$term = $_GET['term'];
-if (true === cRegistry::getConfigValue('simulate_magic_quotes')) {
-    $term = stripslashes($term);
-}
+$term = stripslashes($_GET['term']);
 $term = conHtmlEntityDecode($term);
 
 // switch between showing information about a single search term or all of them

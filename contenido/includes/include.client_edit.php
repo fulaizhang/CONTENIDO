@@ -33,11 +33,7 @@ if (!empty($idclient) && is_numeric($idclient)) {
 }
 
 // @TODO Find a general solution for this!
-if (defined('CON_STRIPSLASHES')) {
-    $request = cString::stripSlashes($_REQUEST);
-} else {
-    $request = $_REQUEST;
-}
+$request = cString::stripSlashes($_REQUEST);
 
 $clientname = $request['clientname'];
 $htmlpath = $request['htmlpath'];

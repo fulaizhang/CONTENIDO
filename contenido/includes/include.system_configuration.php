@@ -193,11 +193,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'edit_sysconf' && $perm->have
         $page->displayError(i18n('You don\'t have the permission to make changes here.'));
     } else {
         // @TODO Find a general solution for this!
-        if (defined('CON_STRIPSLASHES')) {
-            $post = cString::stripSlashes($_POST);
-        } else {
-            $post = $_POST;
-        }
+        $post = cString::stripSlashes($_POST);
         $stored = false;
         foreach ($propertyTypes as $type => $properties) {
             foreach ($properties as $name => $infos) {

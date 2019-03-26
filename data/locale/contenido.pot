@@ -468,36 +468,6 @@ msgstr ""
 msgid "PHP file upload is enabled"
 msgstr ""
 
-#: classes/class.systemtest.php:285
-msgid "PHP setting 'magic_quotes_runtime' is turned on"
-msgstr ""
-
-#: classes/class.systemtest.php:285
-msgid ""
-"The PHP setting 'magic_quotes_runtime' is turned on. CONTENIDO has been "
-"developed to comply with magic_quotes_runtime=Off as this is the PHP default "
-"setting. You have to change this directive to make CONTENIDO work."
-msgstr ""
-
-#: classes/class.systemtest.php:285
-msgid "'magic_quotes_runtime' is turned off"
-msgstr ""
-
-#: classes/class.systemtest.php:286
-msgid "PHP Setting 'magic_quotes_sybase' is turned on"
-msgstr ""
-
-#: classes/class.systemtest.php:286
-msgid ""
-"The PHP Setting 'magic_quotes_sybase' is turned on. CONTENIDO has been "
-"developed to comply with magic_quotes_sybase=Off as this is the PHP default "
-"setting. You have to change this directive to make CONTENIDO work."
-msgstr ""
-
-#: classes/class.systemtest.php:286
-msgid "'magic_quotes_sybase' is turned off"
-msgstr ""
-
 #: classes/class.systemtest.php:287
 msgid "PHP maximum execution time is less than 30 seconds"
 msgstr ""

@@ -205,11 +205,11 @@ if (true === $oNewsletter->isLoaded() && $oNewsletter->get("idclient") == $clien
         $aMessages = array();
 
         // Changing e.g. \' back to ' (magic_quotes)
-        $sName = stripslashes($_REQUEST["txtName"]);
-        $sName = conHtmlSpecialChars($sName);
+        $sName      = stripslashes($_REQUEST["txtName"]);
+        $sName      = conHtmlSpecialChars($sName);
         $sFromEMail = stripslashes($_REQUEST["txtFromEMail"]);
-        $sFromName = stripslashes($_REQUEST["txtFromName"]);
-        $sSubject = stripslashes($_REQUEST["txtSubject"]);
+        $sFromName  = stripslashes($_REQUEST["txtFromName"]);
+        $sSubject   = stripslashes($_REQUEST["txtSubject"]);
 
         if ($oNewsletter->get("name") != $sName || $oNewsletter->get("welcome") != $_REQUEST["ckbWelcome"] || $oNewsletter->get("newsfrom") != $sFromEMail) {
             // Only reload, if something visible has changed

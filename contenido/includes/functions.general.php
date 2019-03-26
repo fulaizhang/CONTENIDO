@@ -413,28 +413,6 @@ function getLanguageNamesByClient($client) {
 }
 
 /**
- * Adds slashes to passed string if PHP setting for magic quotes is disabled
- *
- * @deprecated [2015-05-21]
- *         This method is no longer supported (no replacement)
- *
- * @param string $code
- *         String by reference
- *
- * @throws cInvalidArgumentException
- */
-function set_magic_quotes_gpc(&$code) {
-    cDeprecated('This method is deprecated and is not needed any longer');
-
-    global $cfg;
-    if (!$cfg['simulate_magic_quotes']) {
-        if (get_magic_quotes_gpc() == 0) {
-            $code = addslashes($code);
-        }
-    }
-}
-
-/**
  * Returns a list with all clients and languages.
  *
  * @return array
